@@ -1,3 +1,21 @@
+## Learned:
+- Creating app
+- Creating, using Component
+- Stateless Component
+- PureComponent
+- File management in React project
+- Props
+- States 
+- Inline Conditionals
+- LifeCycle methods
+- Refs
+- Inputs (Controlled vs Uncontrolled)
+- Fetching Data - APIs, async await
+- ESLint
+- Routing
+- Styled-components (using NPM packages: eg. react-overdrive)
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
