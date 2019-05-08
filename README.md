@@ -14,6 +14,7 @@
 - ESLint
 - Routing
 - Styled-components (using NPM packages: eg. react-overdrive)
+- render props
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
