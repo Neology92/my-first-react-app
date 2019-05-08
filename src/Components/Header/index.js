@@ -16,11 +16,10 @@ const Header = () => {
       <Toggle>
           {({ on, toggle }) => (
             <Fragment>
-              <button onClick={ () => toggle() }>Click</button>
+              <button onClick={toggle}>Login</button>
               { on &&
-                <Modal> 
+                <Modal toggle={toggle} on={on}> 
                   <h1>That's in Modal</h1>
-                  <button onClick={ () => toggle() }>Yep</button>
                 </Modal>
               }
             </Fragment>

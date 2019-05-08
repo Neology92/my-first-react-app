@@ -20,7 +20,6 @@ export default class Portal extends Component {
   }
   
   render() {
-    console.log(this.el);
     const { children } = this.props;
     return ReactDOM.createPortal(children, this.el);
   

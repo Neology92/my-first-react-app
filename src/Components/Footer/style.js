@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 const FooterWrap = styled.div`
-{
     margin-top: 7rem;
     height: 100px;
     width: 100%;
@@ -18,7 +17,6 @@ const FooterWrap = styled.div`
     justify-content: center;
     align-items: center;
     flex: 1;
-}
 }
 `;
 
