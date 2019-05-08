@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { HeaderWrapper, Logo } from './style';
 import logo from '../../logo.png';
 import Toggle from '../Toggle/index';
+import Portal from '../Portal/index';
 
 
 const Header = () => {
@@ -14,7 +15,9 @@ const Header = () => {
       <Toggle>
         {({ on, toggle }) => (
           <Fragment>
-            { on && <nav> HI A AM TOGGLE-MANU </nav> }
+            <Portal>
+              { on && <nav> HI A AM TOGGLE-MANU </nav> }
+            </Portal>
             <button onClick={toggle}>Show/Hide</button>
           </Fragment>
         )}
