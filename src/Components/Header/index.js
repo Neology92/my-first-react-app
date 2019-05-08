@@ -11,19 +11,13 @@ const Header = () => {
       <Link to="/">
         <Logo src={logo} className="App-logo" alt="logo" />  
       </Link>
-      <Toggle render={ ({ on, toggle }) => (
+      <Toggle>
+        {({ on, toggle }) => (
           <div>
             <button onClick={toggle}>Show/Hide</button>
-            { on && 
-                <nav style={ {
-                  position: 'absolute',
-                  "z-index": '2',
-                  } }>
-                  HI A AM TOGGLE-MANU
-                </nav>
-            }
+            { on && <nav> HI A AM TOGGLE-MANU </nav> }
           </div>
-      )}>
+        )}
       </Toggle>
     </HeaderWrapper>
   )
