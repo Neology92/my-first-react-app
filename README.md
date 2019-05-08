@@ -16,6 +16,7 @@
 - Styled-components (using NPM packages: eg. react-overdrive)
 - Render props
 - Children render props (cleaner)
+- Fragment
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

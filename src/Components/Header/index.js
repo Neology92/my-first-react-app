@@ -1,6 +1,6 @@
-import React from 'react'
+import React, {Fragment} from 'react';
 import { Link } from 'react-router-dom';
-import { HeaderWrapper, Logo } from './style'
+import { HeaderWrapper, Logo } from './style';
 import logo from '../../logo.png';
 import Toggle from '../Toggle/index';
 
@@ -13,10 +13,10 @@ const Header = () => {
       </Link>
       <Toggle>
         {({ on, toggle }) => (
-          <div>
-            <button onClick={toggle}>Show/Hide</button>
+          <Fragment>
             { on && <nav> HI A AM TOGGLE-MANU </nav> }
-          </div>
+            <button onClick={toggle}>Show/Hide</button>
+          </Fragment>
         )}
       </Toggle>
     </HeaderWrapper>
