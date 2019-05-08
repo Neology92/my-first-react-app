@@ -1,13 +1,13 @@
-import React from 'react';
-import Header from './Components/Header/index';
-import MoviesList from './Components/MoviesGrid/index';
-import MovieDetails from './Components/MovieDetails/index';
-import Footer from './Components/Footer/index';
+import React, {Fragment} from 'react';
 import{
   BrowserRouter as Router,
   Route,
   Switch,
 } from 'react-router-dom';
+import Header from './Components/Header/index';
+import MoviesList from './Components/MoviesGrid/index';
+import MovieDetails from './Components/MovieDetails/index';
+import Footer from './Components/Footer/index';
 import {
   AppWrapper,
   Section,

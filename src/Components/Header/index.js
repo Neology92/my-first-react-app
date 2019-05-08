@@ -1,9 +1,9 @@
 import React, {Fragment} from 'react';
 import { Link } from 'react-router-dom';
-import { HeaderWrapper, Logo } from './style';
 import logo from '../../logo.png';
+import Modal from '../Modal/index';
 import Toggle from '../Toggle/index';
-import Portal from '../Portal/index';
+import { HeaderWrapper, Logo } from './style';
 
 
 const Header = () => {
@@ -12,16 +12,21 @@ const Header = () => {
       <Link to="/">
         <Logo src={logo} className="App-logo" alt="logo" />  
       </Link>
+
       <Toggle>
-        {({ on, toggle }) => (
-          <Fragment>
-            <Portal>
-              { on && <nav> HI A AM TOGGLE-MANU </nav> }
-            </Portal>
-            <button onClick={toggle}>Show/Hide</button>
-          </Fragment>
-        )}
+          {({ on, toggle }) => (
+            <Fragment>
+              <button onClick={ () => toggle() }>Click</button>
+              { on &&
+                <Modal> 
+                  <h1>That's in Modal</h1>
+                  <button onClick={ () => toggle() }>Yep</button>
+                </Modal>
+              }
+            </Fragment>
+          )}
       </Toggle>
+
     </HeaderWrapper>
   )
 }
