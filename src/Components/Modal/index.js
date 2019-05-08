@@ -6,7 +6,7 @@ import Portal from '../Portal/index';
 export default class Modal extends Component {
   render() {
 
-    const { children, on, toggle } = this.props;
+    const { children, toggle } = this.props;
 
     return (
       <Portal>
