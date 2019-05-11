@@ -17,11 +17,11 @@
 - Render props
 - Children render props (cleaner)
 - Fragment
-- Utilities:
-    - Portal
-    - Modal
-    - Toggle
-    - Icon
+- Toggle
+- Portal
+- Modal
+- Icon
+- Utilities... Elements...
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
