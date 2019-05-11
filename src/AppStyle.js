@@ -1,10 +1,11 @@
 import styled from 'styled-components';
+import {background} from 'Utils';
 
 
 export const AppWrapper = styled.div`
   text-align: center;
   min-height: 100vh;
-  background-color: #2a2d36;
+  background-color: ${background};
   overflow: hidden;
 `;
 

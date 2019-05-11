@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { darkBackground } from 'Utils';
 
 export const HeaderWrapper = styled.div`
 padding: 0 5vw;
@@ -9,7 +10,7 @@ align-items: center;
 justify-content: space-between;
 font-size: calc(10px + 2vmin);
 color: white;
-background-color: #1c1e20;
+background-color: ${darkBackground};
 border-bottom: 1px solid rgb(119, 119, 119);
 `;
 

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {fontColor} from 'Utils';
 
 
 export const MovieWrapper = styled.div`
@@ -22,7 +23,7 @@ export const MovieInfo = styled.div`
 
     position: absolute;
     text-align: left;
-    color: white;
+    color: ${fontColor};
     padding: 2rem 10%;
     display: flex;
 

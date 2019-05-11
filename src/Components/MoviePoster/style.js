@@ -1,7 +1,8 @@
 import styled from 'styled-components';
+import { shadows } from 'Utils';
 
 const Poster = styled.img`
-    box-shadow: 0 0 25px 5px black;
+    ${shadows[4]};
     width: 154px;
     height: 231px;
 `;
