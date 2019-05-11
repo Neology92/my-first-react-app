@@ -1,9 +1,9 @@
 import React, {Fragment} from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../logo.png';
-import Modal from '../../Utils/Modal';
-import Toggle from '../../Utils/Toggle';
+import { Toggle } from 'Utils';
+import { Modal } from 'Elements';
 import { HeaderWrapper, Logo } from './style';
+import logo from 'logo.png';
 
 
 const Header = () => {

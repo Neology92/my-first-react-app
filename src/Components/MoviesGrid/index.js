@@ -1,5 +1,5 @@
 import React, {PureComponent} from 'react';
-import Movie from '../MoviePoster';
+import Movie from 'Components/MoviePoster';
 import MoviesGrid from './style.js';
 
 

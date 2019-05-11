@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export default class Icon extends Component {
 
     static defaultProps = {
-      color: 'black'
+      color: 'black',
     }
 
   render() {   
@@ -24,6 +24,8 @@ export default class Icon extends Component {
               />
             </svg>
           )
+        default:
+          return;
     }
   }
 }
