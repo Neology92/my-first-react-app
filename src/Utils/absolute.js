@@ -13,7 +13,8 @@ export default ({x = 'left' ,y = 'top'}) => {
             break;
 
         case 'center':
-            xPos = 'left: 50%; translateX(-50%);';
+            xPos = `left: 50%; 
+                    transform: translateX(-50%);`;
             break;
     }
 
@@ -28,7 +29,8 @@ export default ({x = 'left' ,y = 'top'}) => {
             break;
 
         case 'center':
-            yPos = 'top: 50%; translateY(-50%);';
+            yPos = `top: 50%; 
+                    transform: translateY(-50%);`;
             break;
     }
 
