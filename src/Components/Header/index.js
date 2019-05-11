@@ -1,8 +1,8 @@
 import React, {Fragment} from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../logo.png';
-import Modal from '../Modal';
-import Toggle from '../Toggle';
+import Modal from '../../Utiles/Modal';
+import Toggle from '../../Utiles/Toggle';
 import { HeaderWrapper, Logo } from './style';
 
 
