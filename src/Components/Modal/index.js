@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import Portal from '../Portal/index';
+import Portal from '../Portal';
 
 
 export default class Modal extends Component {

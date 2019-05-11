@@ -4,10 +4,10 @@ import{
   Route,
   Switch,
 } from 'react-router-dom';
-import Header from './Components/Header/index';
-import MoviesList from './Components/MoviesGrid/index';
-import MovieDetails from './Components/MovieDetails/index';
-import Footer from './Components/Footer/index';
+import Header from './Components/Header';
+import MoviesList from './Components/MoviesGrid';
+import MovieDetails from './Components/MovieDetails';
+import Footer from './Components/Footer';
 import {
   AppWrapper,
   Section,
