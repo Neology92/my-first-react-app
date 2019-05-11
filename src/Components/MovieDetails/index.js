@@ -1,8 +1,5 @@
 import React, {PureComponent} from 'react';
-import {
-  MovieWrapper,
-  MovieInfo,
-} from './style';
+import { MovieWrapper, MovieInfo } from './style';
 import Poster from '../MoviePoster/style'
 import Overdrive from 'react-overdrive';
 
