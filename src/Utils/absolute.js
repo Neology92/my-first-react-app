@@ -16,6 +16,10 @@ export default ({x = 'left' ,y = 'top'}) => {
             xPos = `left: 50%; 
                     transform: translateX(-50%);`;
             break;
+
+        default:
+            xPos = 'left: 0;';
+            break;
     }
 
     switch (y)
@@ -32,6 +36,10 @@ export default ({x = 'left' ,y = 'top'}) => {
             yPos = `top: 50%; 
                     transform: translateY(-50%);`;
             break;
+
+        default:
+            yPos = 'top: 0;';
+            break;  
     }
 
     console.log(`
