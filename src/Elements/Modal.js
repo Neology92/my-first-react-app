@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import Icon from './Icon';
+import { Card } from './Card';
 import { Portal } from 'Utils';
-import { Icon } from 'Elements';
-
 
 export default class Modal extends Component {
   render() {
@@ -12,12 +12,12 @@ export default class Modal extends Component {
     return (
       <Portal>
         <ModalWrapper>
-          <Card>
+          <ModalCard>
             {children}
             <CloseButton onClick={toggle}>
               <Icon name="close" color="white"/>
             </CloseButton>
-          </Card>
+          </ModalCard>
           <Background onClick={toggle}/>
         </ModalWrapper>
       </Portal>
@@ -33,7 +33,7 @@ const ModalWrapper = styled.div`
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center
+  justify-content: center;
 `;
 
 const CloseButton = styled.button`
@@ -46,13 +46,8 @@ const CloseButton = styled.button`
   cursor: pointer;
 `;
 
-const Card  = styled.div`
+const ModalCard = styled(Card)`
   position: relative;
-  border: 2px solid white;
-  background-color: #1c1e20;
-  color: red;
-  min-width: 250px;
-  padding: 15px;
   z-index: 10;
 `;
 
