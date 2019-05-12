@@ -20,7 +20,7 @@ const Header = () => {
             <Fragment>
               <Transition
                 items={on}
-                keys={(item => item.key)}
+                unique={true}
                 from={{opacity: 0}}
                 enter={{opacity: 1}}
                 leave={{opacity: 0}}
@@ -37,11 +37,9 @@ const Header = () => {
           {({ on, toggle }) => (
             <Fragment>
               <button onClick={toggle}>Login</button>
-              { on &&
                 <Modal toggle={toggle} on={on}> 
                   <h1>That's in Modal</h1>
                 </Modal>
-              }
             </Fragment>
           )}
       </Toggle>
