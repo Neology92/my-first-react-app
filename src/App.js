@@ -7,6 +7,7 @@ import{
 import Header from './Components/Header';
 import MoviesList from './Components/MoviesGrid';
 import MovieDetails from './Components/MovieDetails';
+import Testing from './Components/Testing';
 import Footer from './Components/Footer';
 import {
   AppWrapper,
@@ -22,6 +23,7 @@ const App = () => (
         <Section>
           <Switch>
             <Route exact path="/" component={MoviesList} />
+            <Route path="/testing-ground" component={Testing}/>
             <Route path="/:id" component={MovieDetails} />
           </Switch>
         </Section>

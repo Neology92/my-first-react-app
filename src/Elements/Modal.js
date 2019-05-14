@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { Transition } from 'react-spring/renderprops';
+import { Transition, animated, interpolate } from 'react-spring/renderprops';
 import Icon from './Icon';
 import { Card } from './Card';
 import { Portal, absolute } from 'Utils';
@@ -13,28 +13,33 @@ export default class Modal extends Component {
     return (
       <Portal>
         <Transition
+          native
+          unique
+          config={{
+            tension: 900,
+            friction: 50,
+          }}   
           items={on}
-          unique={true}          
           from={{opacity: 0, bgOpacity: 0, y: -100,}}
           enter={{opacity: 1, bgOpacity: 0.7, y: 0,}}
           leave={{opacity: 0, bgOpacity: 0, y: -100,}}
         >
         
           { on => on && (
-            props => (
+            ({opacity, bgOpacity, y}) => (
               <ModalWrapper>
                 <ModalCard style={{
-                    opacity: props.opacity,
-                    transform: `translate3d(0,${props.y}px,0)`,
+                    opacity: opacity,
+                    transform: y.interpolate( (y) => `translate3d(0,${y}px,0)`),
                 }}>
                   {children}
                   <CloseButton onClick={toggle}>
                     <Icon name="close" color="white"/>
                   </CloseButton>
                 </ModalCard>
-                <Background 
+                <AnimBackground 
                   onClick={toggle} 
-                  style={{opacity: props.bgOpacity}}
+                  style={{opacity: bgOpacity.interpolate( bgOpacity => bgOpacity)}}
                 />
               </ModalWrapper>
             )
@@ -65,10 +70,12 @@ const CloseButton = styled.button`
   cursor: pointer;
 `;
 
-const ModalCard = styled(Card)`
+const AnimCard = Card.withComponent(animated.div);
+const ModalCard = styled(AnimCard)`
   position: relative;
   z-index: 10;
 `;
+
 
 const Background = styled.div`
   ${absolute({})}
@@ -77,3 +84,5 @@ const Background = styled.div`
   background-color: black;
   opacity: 0.7;
 `;
+
+const AnimBackground = Background.withComponent(animated.div);

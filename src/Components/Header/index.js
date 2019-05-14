@@ -10,17 +10,21 @@ import logo from 'logo.png';
 const Header = () => {
   return (
     <HeaderWrapper>
-      <Link to="/">
-        <Logo src={logo} className="App-logo" alt="logo" />  
-      </Link>
 
+        <Link to="/">
+          <Logo src={logo} className="App-logo" alt="logo" />  
+        </Link>
+
+        <Link to="/testing-ground">
+          <button>Tests</button>  
+        </Link>
 
         <Toggle>
           {({ on, toggle }) => (
             <Fragment>
               <Transition
+                unique
                 items={on}
-                unique={true}
                 from={{opacity: 0}}
                 enter={{opacity: 1}}
                 leave={{opacity: 0}}
