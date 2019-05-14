@@ -1,11 +1,12 @@
 ## Learned:
+
 - Creating app
 - Creating, using Component
 - Stateless Component
 - PureComponent
 - File management in React project
 - Props
-- States 
+- States
 - Inline Conditionals
 - LifeCycle methods
 - Refs
@@ -23,8 +24,11 @@
 - Icon
 - Utilities... Elements...
 - react-spring:
-    - Transition
-
+  - Transition
+  - Spring
+  - interpolate
+  - animated
+- react-with-gesture
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
