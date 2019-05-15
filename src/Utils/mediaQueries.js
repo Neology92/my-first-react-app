@@ -1,23 +1,11 @@
-const size = {
-	small: 400,
-	med: 960,
-	large: 1140,
+export const above = {
+	large: '@media (min-width: 1140px)',
+	med: '@media (min-width: 960px)',
+	small: '@media (min-width: 480px)',
 };
 
-export const above = Object.keys(size).reduce((acc, label) => {
-	acc[label] = props => `
-        @media (min-width: ${size[label]}px) {
-            ${props}
-        }
-    `;
-	return acc;
-}, {});
-
-export const below = Object.keys(size).reduce((acc, label) => {
-	acc[label] = props => `
-        @media (max-width: ${size[label]}px) {
-            ${props}
-        }
-    `;
-	return acc;
-}, {});
+export const below = {
+	large: '@media (max-width: 1140px)',
+	med: '@media (max-width: 960px)',
+	small: '@media (max-width: 480px)',
+};

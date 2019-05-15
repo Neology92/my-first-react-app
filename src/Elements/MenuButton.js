@@ -7,7 +7,7 @@ export default class MenuButton extends React.Component {
 		super(props);
 		this.state = {
 			open: this.props.open ? this.props.open : false,
-			color: this.props.color ? this.props.color : 'white',
+			color: this.props.color ? this.props.color : 'black',
 		};
 	}
 
@@ -50,9 +50,9 @@ const Container = styled.div`
 	align-items: center;
 	padding: 4px;
 
-	${above.small`
-        display: none;
-    `}
+	${above.small} {
+		display: none;
+	}
 `;
 
 const Line = styled.div`

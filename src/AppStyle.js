@@ -5,7 +5,7 @@ export const AppWrapper = styled.div`
 	text-align: center;
 	min-height: 100vh;
 	background-color: ${background};
-	/* overflow: hidden; */
+	overflow: hidden;
 `;
 
 export const Section = styled.section`
