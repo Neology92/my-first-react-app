@@ -1,50 +1,51 @@
 {
-  "name": "react-16-course",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "node-sass": "^4.12.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-overdrive": "0.0.10",
-    "react-router-dom": "^5.0.0",
-    "react-scripts": "3.0.0",
-    "react-spring": "^8.0.20",
-    "react-with-gesture": "^4.0.8",
-    "styled-components": "^4.2.0"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.16.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-jquery": "^1.0.1",
-    "eslint-plugin-flowtype": "^3.7.0",
-    "eslint-plugin-html": "^5.0.3",
-    "eslint-plugin-import": "^2.17.2",
-    "eslint-plugin-jquery": "^1.5.0",
-    "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-react": "^7.13.0",
-    "prop-types": "^15.7.2"
-  }
+	"name": "react-16-course",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"react": "^16.8.6",
+		"react-dom": "^16.8.6",
+		"react-overdrive": "0.0.10",
+		"react-router-dom": "^5.0.0",
+		"react-scripts": "3.0.1",
+		"react-spring": "^8.0.20",
+		"react-with-gesture": "^4.0.8",
+		"styled-components": "^4.2.0"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject"
+	},
+	"eslintConfig": {
+		"extends": "react-app"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"devDependencies": {
+		"babel-eslint": "^10.0.1",
+		"enzyme-adapter-react-16": "^1.13.0",
+		"eslint": "^5.16.0",
+		"eslint-config-airbnb": "^17.1.0",
+		"eslint-config-jquery": "^2.0.0",
+		"eslint-plugin-flowtype": "^3.8.2",
+		"eslint-plugin-html": "^5.0.5",
+		"eslint-plugin-import": "^2.17.2",
+		"eslint-plugin-jquery": "^1.5.0",
+		"eslint-plugin-jsx-a11y": "^6.2.1",
+		"eslint-plugin-react": "^7.13.0",
+		"prop-types": "^15.7.2",
+		"typescript": "^3.4.5"
+	}
 }
