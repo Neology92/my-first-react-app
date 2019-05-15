@@ -27,9 +27,15 @@ const Header = () => {
 						<Transition
 							unique
 							items={on}
-							from={{ opacity: 0 }}
-							enter={{ opacity: 1 }}
-							leave={{ opacity: 0 }}
+							from={{
+								transform: 'translateX(100%)',
+							}}
+							enter={{
+								transform: 'translateX(0%)',
+							}}
+							leave={{
+								transform: 'translateX(100%)',
+							}}
 						>
 							{on => on && HamburgerMenuList}
 						</Transition>
