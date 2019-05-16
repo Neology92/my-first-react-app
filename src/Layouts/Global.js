@@ -35,6 +35,11 @@ const GlobalStyle = createGlobalStyle`
         border: none;
     }
 
+    button:disabled:hover{
+        color: rgb(255, 255, 255, 0.5);
+        cursor: default;
+    }
+
     a {
         text-decoration: inherit;
         color: inherit;
