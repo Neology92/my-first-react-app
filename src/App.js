@@ -7,13 +7,12 @@ import {
 import {
 	Header,
 	Footer,
-	MoviesGrid,
 	AppWrapper,
 	Section,
 	GlobalStyle,
 	TestingGround,
 } from './Layouts';
-import { MovieDetails } from './Components';
+import { MovieDetails, MoviesGrid } from './Components';
 
 const App = () => (
 	<Router>
