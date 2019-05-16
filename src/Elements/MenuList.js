@@ -38,7 +38,7 @@ const MenuMobileView = styled(Menu)`
 	${below.small} {
 		flex-direction: column;
 		justify-content: space-around;
-		${absolute({})}
+		${absolute()}
 		top: calc(10vh + 2px);
 		width: 100%;
 		height: 50vh;

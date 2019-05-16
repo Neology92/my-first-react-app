@@ -1,4 +1,4 @@
-export default ({ x = 'left', y = 'top' }) => {
+export default ({ x = 'left', y = 'top' } = {}) => {
 	let xPos, yPos;
 
 	switch (x) {
