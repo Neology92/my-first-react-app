@@ -2,17 +2,13 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import Drag from 'Components/Drag';
 
-export default class TestingGround extends Component {
-	render() {
-		return (
-			<Container>
-				<Drag />
-			</Container>
-		);
-	}
-}
+const TestingGround = ({ className }) => (
+	<section className={className}>
+		<Drag />
+	</section>
+);
 
-const Container = styled.div`
+export default styled(TestingGround)`
 	min-height: 50vh;
 	display: flex;
 	align-items: center;
