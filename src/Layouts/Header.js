@@ -1,10 +1,9 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { Transition } from 'react-spring/renderprops';
-import { MenuList, HamburgerMenuList } from 'Components';
-import { Toggle, darkBackground, borderColor } from 'Utils';
-import { MenuButton } from 'Elements';
+import { darkBackground, borderColor } from 'Utils';
+import { Menu } from 'Components';
+
 import logo from 'logo.png';
 
 const Header = ({ className }) => (
@@ -12,33 +11,7 @@ const Header = ({ className }) => (
 		<Link to='/'>
 			<img src={logo} alt='logo' />
 		</Link>
-		<Toggle>
-			{({ on, toggle }) => (
-				<Fragment>
-					<MenuButton
-						color='white'
-						onClick={toggle}
-						open={on}
-					/>
-					<Transition
-						unique
-						items={on}
-						from={{
-							transform: 'translateX(100%)',
-						}}
-						enter={{
-							transform: 'translateX(0%)',
-						}}
-						leave={{
-							transform: 'translateX(100%)',
-						}}
-					>
-						{on => on && HamburgerMenuList}
-					</Transition>
-				</Fragment>
-			)}
-		</Toggle>
-		<MenuList />
+		<Menu />
 	</header>
 );
 

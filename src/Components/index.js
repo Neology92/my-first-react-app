@@ -1,6 +1,6 @@
 import MovieDetails from './MovieDetails';
 import Movie from './Movie';
 import Drag from './Drag';
+import Menu from './Menu';
 
-export * from './MenuList';
-export { MovieDetails, Movie, Drag };
+export { MovieDetails, Movie, Drag, Menu };
