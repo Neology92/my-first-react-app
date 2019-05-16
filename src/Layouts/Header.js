@@ -1,13 +1,10 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 import { Transition } from 'react-spring/renderprops';
-import { Toggle } from 'Utils';
+import { MenuList, HamburgerMenuList } from 'Components';
+import { Toggle, darkBackground, borderColor } from 'Utils';
 import { MenuButton } from 'Elements';
-import { HeaderWrapper, Logo } from './style';
-import {
-	MenuList,
-	HamburgerMenuList,
-} from 'Components/MenuList';
 import logo from 'logo.png';
 
 const Header = () => {
@@ -46,5 +43,24 @@ const Header = () => {
 		</HeaderWrapper>
 	);
 };
+
+export const HeaderWrapper = styled.div`
+	padding: 0 5vw;
+	height: 10vh;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	font-size: calc(10px + 2vmin);
+	color: white;
+	background-color: ${darkBackground};
+	border: solid 1px ${borderColor};
+`;
+
+export const Logo = styled.img`
+	height: 4rem;
+	color: white;
+	pointer-events: none;
+`;
 
 export default Header;

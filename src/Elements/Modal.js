@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { Transition, animated } from 'react-spring/renderprops';
+import {
+	Transition,
+	animated,
+} from 'react-spring/renderprops';
+import { Portal, absolute } from 'Utils';
 import Icon from './Icon';
 import { Card } from './Card';
-import { Portal, absolute } from 'Utils';
 
 export default class Modal extends Component {
 	render() {
@@ -30,7 +33,9 @@ export default class Modal extends Component {
 								<ModalCard
 									style={{
 										opacity: opacity,
-										transform: y.interpolate(y => `translate3d(0,${y}px,0)`),
+										transform: y.interpolate(
+											y => `translate3d(0,${y}px,0)`
+										),
 									}}
 								>
 									{children}
@@ -41,7 +46,9 @@ export default class Modal extends Component {
 								<AnimBackground
 									onClick={toggle}
 									style={{
-										opacity: bgOpacity.interpolate(bgOpacity => bgOpacity),
+										opacity: bgOpacity.interpolate(
+											bgOpacity => bgOpacity
+										),
 									}}
 								/>
 							</ModalWrapper>
@@ -86,4 +93,6 @@ const Background = styled.div`
 	opacity: 0.7;
 `;
 
-const AnimBackground = Background.withComponent(animated.div);
+const AnimBackground = Background.withComponent(
+	animated.div
+);

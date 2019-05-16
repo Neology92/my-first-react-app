@@ -1,11 +1,19 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Header from './Components/Header';
-import MoviesList from './Components/MoviesGrid';
-import MovieDetails from './Components/MovieDetails';
-import Testing from './Components/TestingGround';
-import Footer from './Components/Footer';
-import { AppWrapper, Section } from './AppStyle.js';
+import {
+	BrowserRouter as Router,
+	Route,
+	Switch,
+} from 'react-router-dom';
+import {
+	Header,
+	Footer,
+	MoviesGrid,
+	AppWrapper,
+	Section,
+	GlobalStyle,
+	TestingGround,
+} from './Layouts';
+import { MovieDetails } from './Components';
 
 const App = () => (
 	<Router>
@@ -14,13 +22,17 @@ const App = () => (
 
 			<Section>
 				<Switch>
-					<Route exact path='/' component={MoviesList} />
-					<Route path='/testing-ground' component={Testing} />
+					<Route exact path='/' component={MoviesGrid} />
+					<Route
+						path='/testing-ground'
+						component={TestingGround}
+					/>
 					<Route path='/:id' component={MovieDetails} />
 				</Switch>
 			</Section>
 
 			<Footer />
+			<GlobalStyle />
 		</AppWrapper>
 	</Router>
 );

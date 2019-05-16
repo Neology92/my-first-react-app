@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
-import { Card } from 'Elements';
 import styled from 'styled-components';
 import { Gesture } from 'react-with-gesture';
-import { Spring, animated, interpolate } from 'react-spring/renderprops';
+import {
+	Spring,
+	animated,
+	interpolate,
+} from 'react-spring/renderprops';
+import { Card } from 'Elements';
 
 const AnimCard = Card.withComponent(animated.div);
 

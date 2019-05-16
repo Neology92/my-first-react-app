@@ -1,7 +1,21 @@
+import React from 'react';
 import styled from 'styled-components';
 import { below, above, absolute, colors } from 'Utils';
+import { MenuOptions } from 'Elements';
 
-export const Menu = styled.div`
+export const MenuList = () => (
+	<MenuDesktopView>
+		<MenuOptions />
+	</MenuDesktopView>
+);
+
+export const HamburgerMenuList = props => (
+	<MenuMobileView style={props}>
+		<MenuOptions />
+	</MenuMobileView>
+);
+
+const Menu = styled.div`
 	display: flex;
 	flex-direction: row;
 	min-height: 50px;
@@ -14,13 +28,13 @@ export const Menu = styled.div`
 	}
 `;
 
-export const MenuDesktopView = styled(Menu)`
+const MenuDesktopView = styled(Menu)`
 	${below.small} {
 		display: none;
 	}
 `;
 
-export const MenuMobileView = styled(Menu)`
+const MenuMobileView = styled(Menu)`
 	${below.small} {
 		flex-direction: column;
 		justify-content: space-around;
