@@ -17,24 +17,21 @@ export default class MenuButton extends React.Component {
 		}
 	}
 
-	handleClick() {
-		this.setState({ open: !this.state.open });
-	}
-
 	render() {
 		return (
-			<Container
-				onClick={
-					this.props.onClick
-						? this.props.onClick
-						: () => {
-								this.handleClick();
-						  }
-				}
-			>
-				<LineTop open={this.state.open} color={this.state.color} />
-				<LineMiddle open={this.state.open} color={this.state.color} />
-				<LineBottom open={this.state.open} color={this.state.color} />
+			<Container onClick={this.props.onClick}>
+				<LineTop
+					open={this.state.open}
+					color={this.state.color}
+				/>
+				<LineMiddle
+					open={this.state.open}
+					color={this.state.color}
+				/>
+				<LineBottom
+					open={this.state.open}
+					color={this.state.color}
+				/>
 			</Container>
 		);
 	}
@@ -63,19 +60,23 @@ const Line = styled.div`
 `;
 
 const LineTop = styled(Line)`
-	transform: ${props => (props.open ? 'rotate(45deg)' : 'none')};
+	transform: ${props =>
+		props.open ? 'rotate(45deg)' : 'none'};
 	transform-origin: top left;
 	margin-bottom: 5px;
 `;
 
 const LineMiddle = styled(Line)`
 	opacity: ${props => (props.open ? 0 : 1)};
-	transform: ${props => (props.open ? 'translateX(-16px)' : 'none')};
+	transform: ${props =>
+		props.open ? 'translateX(-16px)' : 'none'};
 `;
 
 const LineBottom = styled(Line)`
 	transform: ${props =>
-		props.open ? 'translateX(-1px) rotate(-45deg)' : 'none'};
+		props.open
+			? 'translateX(-1px) rotate(-45deg)'
+			: 'none'};
 	transform-origin: top left;
 	margin-top: 5px;
 `;
