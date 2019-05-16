@@ -2,17 +2,17 @@ import React from 'react';
 import styled from 'styled-components';
 import { darkBackground } from 'Utils';
 
-const Footer = () => {
+const Footer = ({ className }) => {
 	return (
-		<FooterWrap>
+		<footer className={className}>
 			<div> Movies from https://www.themoviedb.org </div>
 			<div> Copyright 2019 Neology</div>
 			<div> That's all...</div>
-		</FooterWrap>
+		</footer>
 	);
 };
 
-const FooterWrap = styled.div`
+export default styled(Footer)`
 	margin-top: 7rem;
 	height: 100px;
 	width: 100%;
@@ -31,5 +31,3 @@ const FooterWrap = styled.div`
 		flex: 1;
 	}
 `;
-
-export default Footer;
