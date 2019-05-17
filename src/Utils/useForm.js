@@ -3,9 +3,6 @@ import { useState, useEffect } from 'react';
 const validate = values => {
 	const errors = [];
 
-	console.log(`First Name: ${values.firstName}`);
-	console.log(`Last Name: ${values.lastName}`);
-
 	if (!values.firstName) {
 		errors.push('Enter Your first name');
 	}
@@ -22,9 +19,7 @@ const useForm = initialValues => {
 	const [errors, setErrors] = useState([]);
 
 	useEffect(() => {
-		if (errors.length !== 0) {
-			setErrors(validate(values));
-		}
+		if (errors.length !== 0) setErrors(validate(values));
 	}, [values]);
 
 	const updateValue = e => {
@@ -34,16 +29,12 @@ const useForm = initialValues => {
 		});
 	};
 
-	//TODO ToFix
-	//? when in array is at least one error...
-	//! errors.length === 0
-
 	const submitHandler = e => {
 		e.preventDefault();
-		setErrors(validate(values));
-		console.log(errors.length);
+		const errs = validate(values);
+		setErrors(errs);
 
-		if (errors.length === 0) {
+		if (errs.length === 0) {
 			console.log('Sending request to API...', values);
 			setValues(initialValues);
 		}
