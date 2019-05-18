@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react';
-import Overdrive from 'react-overdrive';
 import styled from 'styled-components';
 import { fontColor } from 'Utils';
 import { MoviePoster } from 'Elements';
@@ -37,12 +36,10 @@ class MovieDetails extends PureComponent {
 				backdrop={`${BACKDROP_PATH}${movie.backdrop_path}`}
 			>
 				<MovieInfo>
-					<Overdrive id={movie.id}>
-						<MoviePoster
-							src={`${POSTER_PATH}${movie.poster_path}`}
-							alt=''
-						/>
-					</Overdrive>
+					<MoviePoster
+						src={`${POSTER_PATH}${movie.poster_path}`}
+						alt=''
+					/>
 					<div>
 						<h1>{movie.title}</h1>
 						<h3>{movie.release_date}</h3>
