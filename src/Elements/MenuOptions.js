@@ -42,7 +42,7 @@ const Showme = props => (
 	<p
 		style={{
 			opacity: props.opacity,
-			'font-size': '1.4rem',
+			fontSize: '1.4rem',
 		}}
 	>
 		Show me!

@@ -21,7 +21,7 @@ const Drag = () => (
 				{({ x }) => (
 					<Shadow
 						style={{
-							'background-color': x.interpolate({
+							backgroundColor: x.interpolate({
 								range: [-1, 1],
 								output: ['#ca040a', '#20d700'],
 								extrapolate: 'clamp',
