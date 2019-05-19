@@ -4,6 +4,7 @@ import Movie from './Movie';
 import Drag from './Drag';
 import TestForm from './TestForm';
 import Menu from './Menu';
+import Counter from './Counter';
 
 export {
 	MovieDetails,
@@ -12,4 +13,5 @@ export {
 	Drag,
 	Menu,
 	TestForm,
+	Counter,
 };

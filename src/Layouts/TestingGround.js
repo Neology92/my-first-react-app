@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Drag, TestForm } from 'Components';
+import { Drag, TestForm, Counter } from 'Components';
 
 const TestingGround = ({ className }) => (
 	<section className={className}>
 		<Drag />
 		<TestForm />
+		<Counter />
 	</section>
 );
 
