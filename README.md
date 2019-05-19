@@ -6,10 +6,12 @@
 - PureComponent
 - File management in React project
 - Props
-- States
 - Inline Conditionals
 - LifeCycle methods
-- Refs
+- useState
+- useRef
+- useEffect...
+- useReducer
 - Inputs (Controlled vs Uncontrolled)
 - Fetching Data - APIs, async await
 - ESLint
@@ -18,10 +20,11 @@
 - Render props
 - Children render props (cleaner)
 - Fragment
-- Toggle
-- Portal
-- Modal
-- Icon
+- Create:
+  - Toggle
+  - Portal
+  - Modal
+  - Icon
 - Utilities... Elements...
 - react-spring:
   - Transition
