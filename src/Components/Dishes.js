@@ -3,12 +3,17 @@ import React, { useState, useEffect } from 'react';
 const Dishes = props => {
 	const [dishes, setDishes] = useState([]);
 
-	const fetchDishes = async () => {
-		const res = await fetch(
+	const fetchDishes = () => {
+		fetch(
 			'https://my-json-server.typicode.com/leveluptuts/fakeapi/dishes'
-		);
-		const data = await res.json();
-		setDishes(data);
+		)
+			.then(res => res.json())
+			.then(res => {
+				setDishes(res);
+			})
+			.catch(error => {
+				console.log(error);
+			});
 	};
 
 	useEffect(() => {
