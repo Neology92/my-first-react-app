@@ -24,10 +24,13 @@ const Dishes = props => {
 						.indexOf(props.dishName.toLowerCase()) !== -1
 				)
 					return (
-						<article key={index}>
+						<article
+							key={index}
+							className='dish-card dish-card--withImage'
+						>
 							<h3>{dish.name}</h3>
 							<p>{dish.desc}</p>
-							<div>
+							<div className='ingredients'>
 								{dish.ingredients.map(
 									(ingredient, index2) => (
 										<span key={index2}>{ingredient}</span>

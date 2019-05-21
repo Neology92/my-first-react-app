@@ -69,6 +69,7 @@ const Shadow = styled(animated.div)`
 	position: relative;
 	width: 250px;
 	height: 300px;
+	margin-top: 50px;
 `;
 
 export default Drag;
