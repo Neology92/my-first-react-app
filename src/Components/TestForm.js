@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import styled from 'styled-components';
 import {
 	darkBackground,
 	borderColor,
 	useForm,
 } from 'Utils';
+import { Dishes } from 'Components';
 
 const TestForm = ({ className }) => {
 	const [
@@ -12,48 +13,65 @@ const TestForm = ({ className }) => {
 		updateValue,
 		submitHandler,
 		errors,
-	] = useForm({ firstName: '', lastName: '' }); // check if other names works
+	] = useForm({
+		firstName: '',
+		lastName: '',
+		dishName: '',
+	});
 
 	return (
-		<form className={className} onSubmit={submitHandler}>
-			<div className='grid'>
-				<h2>First name:</h2>{' '}
-				<input
-					name='firstName'
-					onChange={updateValue}
-					value={values.firstName}
-				/>
-				<h2>Last name:</h2>{' '}
-				<input
-					name='lastName'
-					onChange={updateValue}
-					value={values.lastName}
-				/>
-			</div>
-			<div className='errors'>
-				{errors &&
-					errors.map((err, index) => (
-						<h3 key={index}>{err}</h3>
-					))}
-			</div>
-			<button type='submit' disabled={errors.length > 0}>
-				Send
-			</button>
-		</form>
+		<Fragment>
+			<form className={className} onSubmit={submitHandler}>
+				<div className='grid'>
+					<h2>First name:</h2>{' '}
+					<input
+						name='firstName'
+						onChange={updateValue}
+						value={values.firstName}
+					/>
+					<h2>Last name:</h2>{' '}
+					<input
+						name='lastName'
+						onChange={updateValue}
+						value={values.lastName}
+					/>
+				</div>
+				<div className='errors'>
+					{errors &&
+						errors.map((err, index) => (
+							<h3 key={index}>{err}</h3>
+						))}
+				</div>
+				<button type='submit' disabled={errors.length > 0}>
+					Send
+				</button>
+			</form>
+			<form className={className} onSubmit={submitHandler}>
+				<div className='grid'>
+					<h2>Dish name:</h2>{' '}
+					<input
+						name='dishName'
+						onChange={updateValue}
+						value={values.dishName}
+					/>
+				</div>
+			</form>
+			<Dishes dishName={values.dishName} />
+		</Fragment>
 	);
 };
 
 export default styled(TestForm)`
 	border: 1px solid ${borderColor};
-	margin: 100px auto;
+	margin: 100px auto 0;
 	padding: 20px;
 
 	& .grid {
 		display: grid;
 		grid-template-columns: 170px 250px;
-		grid-template-rows: 50px 50px;
+		grid-template-rows: 50px;
 		grid-row-gap: 20px;
-		grid-auto-flow: none;
+		grid-auto-flow: row;
 		cursor: default;
 	}
 

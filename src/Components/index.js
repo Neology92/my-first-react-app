@@ -5,6 +5,7 @@ import Drag from './Drag';
 import TestForm from './TestForm';
 import Menu from './Menu';
 import Counter from './Counter';
+import Dishes from './Dishes';
 
 export {
 	MovieDetails,
@@ -14,4 +15,5 @@ export {
 	Menu,
 	TestForm,
 	Counter,
+	Dishes,
 };
