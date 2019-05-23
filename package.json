@@ -10,7 +10,8 @@
 		"react-scripts": "3.0.1",
 		"react-spring": "^8.0.20",
 		"react-with-gesture": "^4.0.8",
-		"styled-components": "^4.2.0"
+		"styled-components": "^4.2.0",
+		"styled-components-modifiers": "^1.1.1"
 	},
 	"scripts": {
 		"start": "react-scripts start",
