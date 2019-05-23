@@ -6,6 +6,7 @@ import {
 	useForm,
 } from 'Utils';
 import { Dishes } from 'Components';
+import { Button } from 'Elements';
 
 const TestForm = ({ className }) => {
 	const [
@@ -42,9 +43,13 @@ const TestForm = ({ className }) => {
 							<h3 key={index}>{err}</h3>
 						))}
 				</div>
-				<button type='submit' disabled={errors.length > 0}>
+				<Button
+					type='submit'
+					modifiers='submit'
+					disabled={errors.length > 0}
+				>
 					Send
-				</button>
+				</Button>
 			</form>
 			<form className={className} onSubmit={submitHandler}>
 				<div className='grid'>
@@ -93,11 +98,5 @@ export default styled(TestForm)`
 		color: red;
 		padding: 10px;
 		cursor: default;
-	}
-
-	& button {
-		background-color: darkgreen;
-		width: 422px;
-		border: 1px solid white;
 	}
 `;

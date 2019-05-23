@@ -1,4 +1,20 @@
 import styled from 'styled-components';
+import { applyStyleModifiers } from 'styled-components-modifiers';
+
+const BUTTON_MODIFIERS = {
+	submit: () => `
+        background-color: darkgreen;
+        width: 422px;
+        border: 1px solid white;
+    `,
+
+	counter: () => `
+        background-color: #500158;
+        min-width: 70px;
+		padding: 10px;
+		margin: 10px;
+    `,
+};
 
 const Button = styled.button`
 	padding: 5px;
@@ -21,6 +37,8 @@ const Button = styled.button`
 	&:hover {
 		color: #fff;
 	}
+
+	${applyStyleModifiers(BUTTON_MODIFIERS)}
 `;
 
 export default Button;

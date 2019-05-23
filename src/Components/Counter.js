@@ -1,5 +1,6 @@
 import React, { useReducer } from 'react';
 import styled from 'styled-components';
+import { Button } from 'Elements';
 
 const initial = { count: 0 };
 
@@ -31,37 +32,44 @@ const Counter = ({ className }) => {
 		<section className={className}>
 			<h3>{state.count}</h3>
 			<div className='buttons'>
-				<button
+				<Button
+					modifiers='counter'
 					onClick={() =>
 						dispatch({ type: 'add', value: 10 })
 					}
 				>
 					+ 10
-				</button>
-				<button
+				</Button>
+				<Button
+					modifiers='counter'
 					onClick={() =>
 						dispatch({ type: 'add', value: 1 })
 					}
 				>
 					+ 1
-				</button>
-				<button onClick={() => dispatch({ type: 'reset' })}>
+				</Button>
+				<Button
+					modifiers='counter'
+					onClick={() => dispatch({ type: 'reset' })}
+				>
 					Reset
-				</button>{' '}
-				<button
+				</Button>{' '}
+				<Button
+					modifiers='counter'
 					onClick={() =>
 						dispatch({ type: 'minus', value: 1 })
 					}
 				>
 					- 1
-				</button>
-				<button
+				</Button>
+				<Button
+					modifiers='counter'
 					onClick={() =>
 						dispatch({ type: 'minus', value: 10 })
 					}
 				>
 					- 10
-				</button>
+				</Button>
 			</div>
 		</section>
 	);
@@ -71,11 +79,5 @@ export default styled(Counter)`
 	.buttons {
 		display: flex;
 		flex-direction: row;
-	}
-
-	button {
-		min-width: 70px;
-		padding: 10px;
-		margin: 10px;
 	}
 `;
