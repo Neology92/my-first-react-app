@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { above } from 'Utils';
 
-export default class MenuButton extends React.Component {
+export default class HamburgerButton extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {

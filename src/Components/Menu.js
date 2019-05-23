@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { Transition } from 'react-spring/renderprops';
 import { Toggle } from 'Utils';
 import {
-	MenuButton,
+	HamburgerButton,
 	MenuList,
 	HamburgerMenuList,
 } from 'Elements';
@@ -12,7 +12,7 @@ const Menu = () => (
 		<Toggle>
 			{({ on, toggle }) => (
 				<Fragment>
-					<MenuButton
+					<HamburgerButton
 						color='white'
 						onClick={toggle}
 						open={on}

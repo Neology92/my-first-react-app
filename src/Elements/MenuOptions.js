@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { Transition } from 'react-spring/renderprops';
 import { Toggle } from 'Utils';
-import { Modal } from 'Elements';
+import { Modal, Button } from 'Elements';
 
 const MenuOptions = () => (
 	<Fragment>
@@ -18,17 +18,17 @@ const MenuOptions = () => (
 					>
 						{on => on && Showme}
 					</Transition>
-					<button onClick={toggle}>Show/Hide</button>
+					<Button onClick={toggle}>Show/Hide</Button>
 				</Fragment>
 			)}
 		</Toggle>
-		<button>
+		<Button>
 			<Link to='/testing-ground'>Tests</Link>
-		</button>
+		</Button>
 		<Toggle>
 			{({ on, toggle }) => (
 				<Fragment>
-					<button onClick={toggle}>Login</button>
+					<Button onClick={toggle}>Login</Button>
 					<Modal toggle={toggle} on={on}>
 						<h1>That's in Modal</h1>
 					</Modal>

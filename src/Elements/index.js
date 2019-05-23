@@ -1,15 +1,17 @@
 import Modal from './Modal';
 import Icon from './Icon';
-import MenuButton from './MenuButton';
+import HamburgerButton from './HamburgerButton';
 import MenuOptions from './MenuOptions';
 import MoviePoster from './MoviePoster';
+import Button from './Button';
 
 export * from './MenuList';
 export * from './Card';
 export {
 	Modal,
 	Icon,
-	MenuButton,
+	HamburgerButton,
 	MenuOptions,
 	MoviePoster,
+	Button,
 };
