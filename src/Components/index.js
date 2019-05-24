@@ -6,6 +6,7 @@ import TestForm from './TestForm';
 import Menu from './Menu';
 import Counter from './Counter';
 import Dishes from './Dishes';
+import ShowModal from './ShowModal';
 
 export {
 	MovieDetails,
@@ -16,4 +17,5 @@ export {
 	TestForm,
 	Counter,
 	Dishes,
+	ShowModal,
 };
